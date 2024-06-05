@@ -17,6 +17,7 @@ public class Main {
                 break;
             }
         }
+
   // 2
         System.out.println("2.");
         clientOS = 0;
@@ -43,6 +44,28 @@ public class Main {
             default: {
                 break;
             }
+        }
+
+  // 3
+        System.out.println("3.");
+        int year = 2196;
+        boolean leapYear = false;
+        if (year > 1584) {
+            if (year % 4 == 0) {
+                leapYear = true;
+            }
+            if (year % 100 == 0) {
+                leapYear = false;
+            }
+            if (year % 400 == 0) {
+                leapYear = true;
+            }
+        }
+        if (leapYear) {
+            System.out.println(year + " - год високосный.");
+        }
+        else {
+            System.out.println(year + " - год не високосный.");
         }
     }
 }
