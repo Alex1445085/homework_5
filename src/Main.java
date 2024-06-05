@@ -67,5 +67,28 @@ public class Main {
         else {
             System.out.println(year + " - год не високосный.");
         }
+
+  // 4
+        System.out.println("4.");
+        int deliveryDistance = 101;
+        int daysToDelivery = 0;
+        if (deliveryDistance > 0) {
+            daysToDelivery++;
+        }
+        if (deliveryDistance > 20) {
+            daysToDelivery++;
+        }
+        if (deliveryDistance > 60) {
+            daysToDelivery++;
+        }
+        if (deliveryDistance > 100) {
+            daysToDelivery = 0;
+        }
+        if (daysToDelivery == 0) {
+            System.out.println("Доставки нет!");
+        }
+        else {
+            System.out.println("Потребуется дней " + daysToDelivery);
+        }
     }
 }
