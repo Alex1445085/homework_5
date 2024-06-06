@@ -48,16 +48,16 @@ public class Main {
 
   // 3
         System.out.println("3.");
-        int year = 2000;
+        int year = 2021;
         boolean leapYear = false;
-        if (year > 1584) {
-            if (year % 4 == 0) {
+        if (year >= 1584) {
+            if (year % 400 == 0) {
                 leapYear = true;
             }
-            if (year % 100 == 0) {
+            else if (year % 100 == 0) {
                 leapYear = false;
             }
-            if (year % 400 == 0) {
+            else if (year % 4 == 0) {
                 leapYear = true;
             }
         }
