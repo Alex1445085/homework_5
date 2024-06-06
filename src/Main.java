@@ -48,7 +48,7 @@ public class Main {
 
   // 3
         System.out.println("3.");
-        int year = 2012;
+        int year = 2000;
         boolean leapYear = false;
         if (year > 1584) {
             if (year % 4 == 0) {
@@ -71,55 +71,37 @@ public class Main {
   // 4
         System.out.println("4.");
         int deliveryDistance = 101;
-        int daysToDelivery = 0;
-        if (deliveryDistance > 0) {
-            daysToDelivery++;
-        }
-        if (deliveryDistance > 20) {
-            daysToDelivery++;
-        }
-        if (deliveryDistance > 60) {
-            daysToDelivery++;
-        }
+        int daysToDelivery = 1;
         if (deliveryDistance > 100) {
-            daysToDelivery = 0;
-        }
-        if (daysToDelivery == 0) {
             System.out.println("Доставки нет!");
         }
         else {
-            System.out.println("Потребуется дней " + daysToDelivery);
+            if (deliveryDistance > 20) {
+                daysToDelivery++;
+            }
+            if (deliveryDistance > 60) {
+                daysToDelivery++;
+            }
+            System.out.println("Для доставки потребуется " + daysToDelivery + " день/дня.");
         }
+
+
 
   // 5
         System.out.println("5.");
         byte monthNumber = 12;
-        byte season = 0;
         if (monthNumber > 0 && monthNumber <=  12) {
-            if (monthNumber <= 2 || monthNumber == 12) {
-                season = 0;
-            }
-            if (monthNumber >= 3 && monthNumber <= 5) {
-                season = 1;
-            }
-            if (monthNumber >= 6 && monthNumber <= 8) {
-                season = 2;
-            }
-            if (monthNumber >= 9 && monthNumber <= 11) {
-                season = 3;
-            }
-
-            switch (season) {
-                case 0:
+            switch (monthNumber) {
+                case 1: case 2: case 12:
                     System.out.println("Месяц " + monthNumber + " - сезон зима");
                     break;
-                case 1:
+                case 3: case 4: case 5:
                     System.out.println("Месяц " + monthNumber + " - сезон весна");
                     break;
-                case 2:
+                case 6: case 7: case 8:
                     System.out.println("Месяц " + monthNumber + " - сезон лето");
                     break;
-                case 3:
+                case 9: case 10: case 11:
                     System.out.println("Месяц " + monthNumber + " - сезон осень");
                     break;
             }
