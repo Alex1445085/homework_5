@@ -48,7 +48,7 @@ public class Main {
 
   // 3
         System.out.println("3.");
-        int year = 2196;
+        int year = 2012;
         boolean leapYear = false;
         if (year > 1584) {
             if (year % 4 == 0) {
@@ -90,5 +90,44 @@ public class Main {
         else {
             System.out.println("Потребуется дней " + daysToDelivery);
         }
+
+  // 5
+        System.out.println("5.");
+        byte monthNumber = 12;
+        byte season = 0;
+        if (monthNumber > 0 && monthNumber <=  12) {
+            if (monthNumber <= 2 || monthNumber == 12) {
+                season = 0;
+            }
+            if (monthNumber >= 3 && monthNumber <= 5) {
+                season = 1;
+            }
+            if (monthNumber >= 6 && monthNumber <= 8) {
+                season = 2;
+            }
+            if (monthNumber >= 9 && monthNumber <= 11) {
+                season = 3;
+            }
+
+            switch (season) {
+                case 0:
+                    System.out.println("Месяц " + monthNumber + " - сезон зима");
+                    break;
+                case 1:
+                    System.out.println("Месяц " + monthNumber + " - сезон весна");
+                    break;
+                case 2:
+                    System.out.println("Месяц " + monthNumber + " - сезон лето");
+                    break;
+                case 3:
+                    System.out.println("Месяц " + monthNumber + " - сезон осень");
+                    break;
+            }
+        }
+        else {
+            System.out.println("Месяц " + monthNumber + " - так не бывает!");
+        }
+
+
     }
 }
